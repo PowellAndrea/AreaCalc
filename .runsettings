@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<!-- configuration elements -->
+
+	<TestRunParameters>
+		<Parameter name="LENGTH"	value="4" />
+		<Parameter name="HEIGHT"	value="3" />
+		<Parameter name="RADIUS"	value="7" />
+		<Parameter name="CIRCUMFERENCE" value="5" />
+	</TestRunParameters>
+
+	<TestSessionTimeout>10000</TestSessionTimeout>
+	<TreatNoTestsAsError>true</TreatNoTestsAsError>
+
+	<TargetFrameworkVersion>net50</TargetFrameworkVersion>
+
+</RunSettings>
