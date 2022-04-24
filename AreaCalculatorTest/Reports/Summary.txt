@@ -1,0 +1,4 @@
+﻿a summary of your complexity findings for all methods
+the two you chose for testing among all that were candidates
+the coverage for each
+a general, short narrative (~100 words describing the effort and any issues encountered)
