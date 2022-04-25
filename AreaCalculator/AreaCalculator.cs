@@ -5,17 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-/*
- * Check percision on return
- */
-
-namespace Area_Calc_Lastname
+namespace AreaCalculatorNS
 {
-   static class AreaCalculator
+   public static class AreaCalculator
    {
       internal const decimal PI = 3.14M;
 
-      static Dictionary<string, int> Dictionary = new Dictionary<string, int>
+      static readonly Dictionary<string, int> Dictionary = new Dictionary<string, int>
       {
          {"one", 1 },
          {"two", 2 },
@@ -28,12 +24,12 @@ namespace Area_Calc_Lastname
          {"nine", 0 },
          {"ten", 10 }
       };
-            
+
       public static double Calculate(int _base, int _height)
       {
          return _base * _height;
       }
-      
+
       #region Squares
       public static double getSquareArea(int _base)
       {
@@ -65,7 +61,7 @@ namespace Area_Calc_Lastname
 
       public static double getCircleRadius(int _circumference)
       {
-         return (double) (_circumference / (2 * PI));
+         return (double)Math.Truncate(_circumference / (2 * PI) * 100) / 100;
       }
 
       public static double getCircleDiameter(int _radius)
