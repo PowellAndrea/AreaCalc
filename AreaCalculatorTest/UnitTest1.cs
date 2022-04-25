@@ -5,6 +5,8 @@ using AreaCalculatorNS;
 namespace AreaCalculatorTest
 {
 
+   // Check for neg #'s
+
    [TestClass]
    public class UnitTest1
    {
@@ -21,6 +23,12 @@ namespace AreaCalculatorTest
 
       [TestMethod]
       public void TestSquare2() => Assert.AreEqual(AreaCalculator.getSquareArea("seven"), 49);
+
+      [TestMethod]
+      public void TestSquare3() => Assert.AreEqual(AreaCalculator.getSquareArea("SeVen"), 49);
+      
+      [TestMethod]
+      public void TestSquare4() => Assert.AreEqual(AreaCalculator.getSquareArea("eleven"), 0);
 
       [TestMethod]
       public void TestRectangle() => Assert.AreEqual(AreaCalculator.getRectangleArea(5, 4), 20);

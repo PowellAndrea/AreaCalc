@@ -39,7 +39,7 @@ namespace AreaCalculatorNS
       public static double getSquareArea(string _base)
       {
          _base = _base.ToLower();
-         return getSquareArea(Dictionary.TryGetValue(_base, out int _x) ? _x : -1);
+         return getSquareArea(Dictionary.TryGetValue(_base, out int _x) ? _x : 0);
       }
 
       #endregion
