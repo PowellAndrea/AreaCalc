@@ -8,24 +8,18 @@ namespace AreaCalculatorTest
    [TestClass]
    public class UnitTest1
    {
-      private int Base = 3;
-      private int Height = 7;
-      private int Radius = 4;
-      private int Circ = 3;
+      int Base = 3;
+      int Height = 7;
+      int Radius = 4;
+      int Circ = 3;
 
       public TestContext TestContext { get; set; }
 
       // I couldn't quite get there .. but danced all night long.
-      //private int Base;
-      //private int Height;
-      //private int Radius;
-      //private int Circ;
 
-
-      ////[TestInitialize]
+      //[TestInitialize]
       //[ClassInitialize]
-      //public void ClassInitialize(TestContext context)
-      //{
+      //public void TestInitialize(TestContext context) {
       //   Base = (int)context.Properties["BASE"];     // 3
       //   Height = (int)context.Properties["HEIGHT"]; // 7
       //   Radius = (int)context.Properties["RADIUS"]; // 4
