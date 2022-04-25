@@ -13,15 +13,23 @@ namespace AreaCalculatorTest
       private int Radius = 4;
       private int Circ = 3;
 
-      //public TestContext TestContext { get; set; }
+      public TestContext TestContext { get; set; }
 
-      //[TestInitialize]
-      //public void TestInitalization(TestContext context)
+      // I couldn't quite get there .. but danced all night long.
+      //private int Base;
+      //private int Height;
+      //private int Radius;
+      //private int Circ;
+
+
+      ////[TestInitialize]
+      //[ClassInitialize]
+      //public void ClassInitialize(TestContext context)
       //{
-      //   this.Base = (int)context.Properties["BASE"];     // 3
-      //   this.Height = (int)context.Properties["HEIGHT"]; // 7
-      //   this.Radius = (int)context.Properties["RADIUS"]; // 4
-      //   this.Circ = (int)context.Properties["CIRC"];     // 3
+      //   Base = (int)context.Properties["BASE"];     // 3
+      //   Height = (int)context.Properties["HEIGHT"]; // 7
+      //   Radius = (int)context.Properties["RADIUS"]; // 4
+      //   Circ = (int)context.Properties["CIRC"];     // 3
       //}
 
 
