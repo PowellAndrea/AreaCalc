@@ -15,6 +15,20 @@ namespace Area_Calc_Lastname
    {
       internal const decimal PI = 3.14M;
 
+      static Dictionary<string, int> Dictionary = new Dictionary<string, int>
+      {
+         {"one", 1 },
+         {"two", 2 },
+         {"three", 3 },
+         {"four", 4 },
+         {"five", 5 },
+         {"six", 6 },
+         {"seven", 7},
+         {"eight", 8 },
+         {"nine", 0 },
+         {"ten", 10 }
+      };
+            
       public static double Calculate(int _base, int _height)
       {
          return _base * _height;
@@ -23,15 +37,13 @@ namespace Area_Calc_Lastname
       #region Squares
       public static double getSquareArea(int _base)
       {
-         return Calculate(_base,_base);
+         return Calculate(_base, _base);
       }
 
-      public static double GetSquareArea(string _base)
+      public static double getSquareArea(string _base)
       {
-         if (!string.IsNullOrEmpty(_base) && Convert.ToInt16(_base) >-1 && Convert.ToInt16(_base) <11)
-         { return Calculate(Convert.ToInt16(_base), Convert.ToInt16(_base));
-         }
-         else { return -1; }
+         _base = _base.ToLower();
+         return getSquareArea(Dictionary.TryGetValue(_base, out int _x) ? _x : -1);
       }
 
       #endregion
@@ -53,12 +65,12 @@ namespace Area_Calc_Lastname
 
       public static double getCircleRadius(int _circumference)
       {
-         return (double)(_circumference / (2 * PI));
+         return (double) (_circumference / (2 * PI));
       }
 
       public static double getCircleDiameter(int _radius)
       {
-         return _radius * 2;
+         return Calculate(_radius, _radius);
       }
    }
 }
