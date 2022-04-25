@@ -27,7 +27,8 @@ namespace AreaCalculatorNS
 
       public static double Calculate(int _base, int _height)
       {
-         return _base * _height;
+         if (_base > 0 && _height > 0) { return _base * _height; }
+            else { return -1; }
       }
 
       #region Squares

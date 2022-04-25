@@ -3,7 +3,10 @@
 	<!-- configuration elements -->
 
 	<TestRunParameters>
-
+		<Parameter name="BASE" value="3" />
+		<Parameter name="HEIGHT" value="7"/>
+		<Parameter name="RADIUS" value="4"/>
+		<Parameter name="CIRC" value="3"/>
 	</TestRunParameters>
 
 	<TestSessionTimeout>10000</TestSessionTimeout>

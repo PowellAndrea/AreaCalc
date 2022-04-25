@@ -5,42 +5,55 @@ using AreaCalculatorNS;
 namespace AreaCalculatorTest
 {
 
-   // Check for neg #'s
-
    [TestClass]
    public class UnitTest1
    {
+      private int Base = 3;
+      private int Height = 7;
+      private int Radius = 4;
+      private int Circ = 3;
+
       //public TestContext TestContext { get; set; }
 
-      //[ClassInitialize]
-      //public static void TestClassinitialize(TestContext context)
+      //[TestInitialize]
+      //public void TestInitalization(TestContext context)
       //{
-      //   var x = context.Properties["RADIUS"];
+      //   this.Base = (int)context.Properties["BASE"];     // 3
+      //   this.Height = (int)context.Properties["HEIGHT"]; // 7
+      //   this.Radius = (int)context.Properties["RADIUS"]; // 4
+      //   this.Circ = (int)context.Properties["CIRC"];     // 3
       //}
 
-      [TestMethod]
-      public void TestSquare1() => Assert.AreEqual(AreaCalculator.getSquareArea(7),49);
 
       [TestMethod]
-      public void TestSquare2() => Assert.AreEqual(AreaCalculator.getSquareArea("seven"), 49);
+      public void TestSquare1() => Assert.AreEqual(AreaCalculator.getSquareArea(Base),9);
 
       [TestMethod]
-      public void TestSquare3() => Assert.AreEqual(AreaCalculator.getSquareArea("SeVen"), 49);
+      public void TestSquareseven() => Assert.AreEqual(AreaCalculator.getSquareArea("seven"), 49);
+
+      [TestMethod]
+      public void TestSquareSeVen() => Assert.AreEqual(AreaCalculator.getSquareArea("SeVen"), 49);
       
       [TestMethod]
-      public void TestSquare4() => Assert.AreEqual(AreaCalculator.getSquareArea("eleven"), 0);
+      public void TestSquareeleven() => Assert.AreEqual(AreaCalculator.getSquareArea("eleven"), -1);
 
       [TestMethod]
-      public void TestRectangle() => Assert.AreEqual(AreaCalculator.getRectangleArea(5, 4), 20);
+      public void TestSquareBob() => Assert.AreEqual(AreaCalculator.getSquareArea("Bob"), -1);
 
       [TestMethod]
-      public void TestParallelogram() => Assert.AreEqual(AreaCalculator.getParallelogramArea(5, 4), 20);
+      public void TestRectangle() => Assert.AreEqual(AreaCalculator.getRectangleArea(Base, Height), 21);
 
       [TestMethod]
-      public void TestRadius() => Assert.AreEqual(AreaCalculator.getCircleRadius(3), .47);
+      public void TestParallelogram() => Assert.AreEqual(AreaCalculator.getParallelogramArea(Base, Height), 21);
 
       [TestMethod]
-      public void TestDiamter() => Assert.AreEqual(AreaCalculator.getCircleDiameter(3), 9);
+      public void TestTriangle() => Assert.AreEqual(AreaCalculator.getTriangleArea(Base, Height), 10.5);
+
+      [TestMethod]
+      public void TestRadius() => Assert.AreEqual(AreaCalculator.getCircleRadius(Circ), .47);
+
+      [TestMethod]
+      public void TestDiamter() => Assert.AreEqual(AreaCalculator.getCircleDiameter(Radius), 16);
 
    }
 }
